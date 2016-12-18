@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: grey;
+}
+
+
+body:hover{
+    cursor: default;
+}
+
+label{
+    width: 170px;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+    display: block;
+}
+
+p{
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+}
+
+.wrapper{
+    width: 1200px;
+    min-height: calc(100vh - 120px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    width: 1200px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    background-color: #ebebeb;
+    border-radius: 0 0 5px 5px;
+}
+
+.header img{
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 10px;
+    max-width: 320px;
+    max-height: 80px;
+}
+
+.leftBar{
+    width: 170px;
+    height: 470px;
+    margin-left: 50px;
+    margin-top: 0;
+    padding: 10px;
+    float: left;
+    background-color: #ebebeb;;
+    border-radius: 5px;
+}
+
+.leftBar p{
+    margin-bottom: 5px;
+}
+
+.leftBar input[type="text"]{
+    max-width: 165px;
+    margin-bottom: 30px;
+}
+
+.leftBar input[type="checkbox"]{
+    margin-bottom: 10px;
+}
+
+.leftBar input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+.leftBar label:last-of-type{
+    margin-bottom: 20px;
+}
+
+.leftBar img{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.leftBar img:hover{
+    cursor: pointer;
+}
+
+.leftBar input[type="submit"]{
+    width: 100px;
+    height: 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 20px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: #979797;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+}
+
+.leftBar input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+
+.content{
+    width: 890px;
+    margin-left: 260px;
+    margin-bottom: 20px;
+    min-height: calc(100vh - 100px);
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+
+.cafe{
+    width: 410px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    float: left;
+    background-color: #bababa;
+    border-radius: 5px;
+}
+
+.cafe p{
+    margin-bottom: 5px;
+}
+
+.footer{
+    width: 1100px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 14px;
+    border-radius: 5px 5px 0 0;
+    background-color: #ebebeb;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.redirectToAdminPagTitle{
+    width: 500px;
+    height: 16px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.redirectToAdminPagTitle p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Foods+:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Foods-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Foods+:war exploded" />
+    </root>
+  </artifact>
+</component>

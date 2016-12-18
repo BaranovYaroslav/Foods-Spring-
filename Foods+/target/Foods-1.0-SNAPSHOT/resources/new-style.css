@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: grey;
+}
+
+
+body:hover{
+    cursor: default;
+}
+
+label{
+    width: 170px;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+    display: block;
+}
+
+p{
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+}
+
+.wrapper{
+    width: 1200px;
+    min-height: calc(100vh - 244px);
+    max-height: calc(100vh - 244px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.header{
+    width: 1200px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    background-color: #ebebeb;
+    border-radius: 0 0 5px 5px;
+}
+
+.header img{
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 10px;
+    max-width: 320px;
+    max-height: 80px;
+}
+
+.newCafeForm{
+    width: 300px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+
+.newCafeForm p:first-child{
+    font-size: 20px;
+    text-align: center;
+}
+
+.newCafeForm input[type="text"]{
+    min-width: 300px;
+    margin-bottom: 20px;
+    font-family: Consolas, monaco, monospace;
+    font-size: 14px;
+}
+
+.newCafeForm textarea{
+    min-width: 300px;
+    min-height: 80px;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: 14px;
+}
+
+.newCafeForm input[type="submit"]{
+    width: 100px;
+    height: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: #69bd7a;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+}
+
+.newCafeForm input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #548e61;
+}
+
+.footer{
+    width: 1100px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 14px;
+    border-radius: 5px 5px 0 0;
+    background-color: #ebebeb;
+    text-align: center;
+    vertical-align: middle;
+}
