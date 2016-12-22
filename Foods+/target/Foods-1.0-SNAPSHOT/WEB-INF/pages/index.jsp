@@ -49,7 +49,7 @@
 		<script>
 			function getCafes(){
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "/Foods-1.0-SNAPSHOT/getCafe", true);
+				xhr.open("GET", "/Foods-1.0-SNAPSHOT/cafes", true);
 				xhr.send();
 
 				xhr.onreadystatechange = function(){

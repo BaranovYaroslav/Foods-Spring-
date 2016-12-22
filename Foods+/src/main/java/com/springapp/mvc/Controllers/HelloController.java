@@ -17,6 +17,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class HelloController {
+
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
 		CafeDao cafeDao = new CafeDao();
@@ -26,8 +27,8 @@ public class HelloController {
 		return "index";
 	}
 
-	@RequestMapping(value = "{getCafe}",method = RequestMethod.GET)
-	public @ResponseBody List<CafeDto> getCafe(@PathVariable("getCafe") String getCafe){
+	@RequestMapping(value = "/cafes",method = RequestMethod.GET)
+	public @ResponseBody List<CafeDto> getCafe(){
 		CafeDao cafeDao = new CafeDao();
 		List<CafeDto> cafeDTOList = new ArrayList<CafeDto>();
 		for(Cafe cafe: cafeDao.getALl()){
