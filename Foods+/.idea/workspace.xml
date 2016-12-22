@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95db8061-1275-4e90-93d6-78512696f0de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/index-style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/index-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/login-style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/login-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Foods-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/Foods-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Foods-1.0-SNAPSHOT/resources/index-style.css" afterPath="$PROJECT_DIR$/target/Foods-1.0-SNAPSHOT/resources/index-style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,20 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="578">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.26211452" vertical-offset="0" max-vertical-offset="578">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login-style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login-style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/login-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20689656" vertical-offset="612" max-vertical-offset="1241">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1241">
               <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding />
             </state>
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/Controllers/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/index-style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/login-style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
       </list>
     </option>
   </component>
@@ -902,7 +902,7 @@
       <workItem from="1482012133415" duration="13381000" />
       <workItem from="1482042804988" duration="8877000" />
       <workItem from="1482287284688" duration="4135000" />
-      <workItem from="1482388561680" duration="6041000" />
+      <workItem from="1482388561680" duration="6212000" />
     </task>
     <task id="LOCAL-00001" summary="Add Git support for IDE">
       <created>1482290503385</created>
@@ -916,11 +916,17 @@
       <option name="project" value="LOCAL" />
       <updated>1482393464336</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add styles for login page">
+      <created>1482395618146</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1482395618146</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53879000" />
+    <option name="totallyTimeSpent" value="54050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1292" height="1000" extended-state="0" />
@@ -977,7 +983,8 @@
     </option>
     <MESSAGE value="Add Git support for IDE" />
     <MESSAGE value="Add custom login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add custom login form" />
+    <MESSAGE value="Add styles for login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add styles for login page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1362,14 +1369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="578">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/index-style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1577" max-vertical-offset="2907">
@@ -1380,8 +1379,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/login-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20689656" vertical-offset="612" max-vertical-offset="1241">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1241">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26211452" vertical-offset="0" max-vertical-offset="578">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
