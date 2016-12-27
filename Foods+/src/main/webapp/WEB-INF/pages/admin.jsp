@@ -15,29 +15,19 @@
     <div class="wrapper">
 
       <div class="leftBar">
-        <form>
 
-          <p>Enter minimal sum:</p>
-          <label><input type="text"></label>
+        <div class="leftBarElement">
+          <form id="newCafeForm" action="/Foods-1.0-SNAPSHOT/admin/new">
+            <p id="newCafe">New cafe</p>
+          </form>
+        </div>
 
-          <p>Enter maximal sum:</p>
-          <label><input type="text"></label>
+        <div class="leftBarElement">
+          <form id="logoutForm" action="/Foods-1.0-SNAPSHOT/admin/logout">
+            <p id="logout">Logout</p>
+          </form>
+        </div>
 
-          <p>Select type:</p>
-          <label><input type="checkbox"> Meat</label>
-          <label><input type="checkbox"> Vegetarian</label>
-          <label><input type="checkbox"> Cakes</label>
-
-          <p>Choose location:</p>
-          <img src="/Foods-1.0-SNAPSHOT/resources/pictures/map.png">
-
-          <input type="submit" value="Search">
-
-        </form>
-
-        <form id="logoutForm" class="logoutForm" action="/Foods-1.0-SNAPSHOT/admin/logout">
-          <p id="logout">Logout</p>
-        </form>
       </div>
 
       <div class="content">
@@ -53,12 +43,11 @@
       $("#logout").on({
         click: function (){
           $("#logoutForm").submit();
-        },
-        mouseenter: function(){
-          $(this).css("text-decoration", "underline");
-        },
-        mouseleave: function(){
-          $(this).css("text-decoration", "none");
+        }
+      });
+      $("#newCafe").on({
+        click: function (){
+          $("#newCafeForm").submit();
         }
       })
     })

@@ -51,75 +51,33 @@ p{
 }
 
 .leftBar{
-    width: 170px;
-    height: 470px;
+    width: 150px;
+    height: 150px;
     margin-left: 50px;
     margin-top: 0;
-    padding: 10px;
+    padding: 20px;
     float: left;
     background-color: #ebebeb;;
     border-radius: 5px;
+    text-align: center;
 }
 
 .leftBar p{
     margin-bottom: 5px;
 }
 
-.leftBar input[type="text"]{
-    max-width: 165px;
-    margin-bottom: 30px;
-}
-
-.leftBar input[type="checkbox"]{
-    margin-bottom: 10px;
-}
-
-.leftBar input[type="checkbox"]:hover{
-    cursor: pointer;
-}
-
-.leftBar label:last-of-type{
+.leftBarElement{
+    width: 110px;
+    height: 25px;
     margin-bottom: 20px;
-}
-
-.leftBar img{
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    max-width: 70px;
-    max-height: 70px;
-}
-
-.leftBar img:hover{
-    cursor: pointer;
-}
-
-.leftBar input[type="submit"]{
-    width: 100px;
-    height: 50px;
-    margin-left: 35px;
-    margin-right: 35px;
-    margin-top: 20px;
-    border: 2px solid grey;
+    padding: 20px;
+    background-color: #bcbcbc;;
     border-radius: 5px;
+}
+
+.leftBarElement:hover{
+    cursor: pointer;
     background-color: #979797;
-    font-family: Consolas, monaco, monospace;
-    font-size: 16px;
-}
-
-.leftBar input[type="submit"]:hover{
-    cursor: pointer;
-    background-color: grey;
-}
-
-.logoutForm{
-    width: 150px;
-    height: 20px;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: #ebebeb;;
-    border-radius: 5px;
-    text-align: center;
 }
 
 .content{
