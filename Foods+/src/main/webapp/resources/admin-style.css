@@ -112,6 +112,16 @@ p{
     background-color: grey;
 }
 
+.logoutForm{
+    width: 150px;
+    height: 20px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #ebebeb;;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .content{
     width: 890px;
     margin-left: 260px;
@@ -146,16 +156,4 @@ p{
     background-color: #ebebeb;
     text-align: center;
     vertical-align: middle;
-}
-
-.redirectToAdminPagTitle{
-    width: 500px;
-    height: 16px;
-    margin-left: 300px;
-    margin-right: 300px;
-}
-
-.redirectToAdminPagTitle p:hover{
-    cursor: pointer;
-    text-decoration: underline;
 }

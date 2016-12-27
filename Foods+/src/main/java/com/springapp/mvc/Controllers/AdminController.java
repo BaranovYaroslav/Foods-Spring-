@@ -40,7 +40,7 @@ public class AdminController {
         if(authentication != null){
             new SecurityContextLogoutHandler().logout(request, response, authentication);
         }
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     private String getPrincipal(){

@@ -3,6 +3,7 @@
   <head>
     <title>Admin page</title>
     <link rel="stylesheet" href="/Foods-1.0-SNAPSHOT/resources/admin-style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -33,6 +34,10 @@
           <input type="submit" value="Search">
 
         </form>
+
+        <form id="logoutForm" class="logoutForm" action="/Foods-1.0-SNAPSHOT/admin/logout">
+          <p id="logout">Logout</p>
+        </form>
       </div>
 
       <div class="content">
@@ -43,5 +48,20 @@
     <div class="footer">
     </div>
 
+  <script>
+    $(document).ready(function(){
+      $("#logout").on({
+        click: function (){
+          $("#logoutForm").submit();
+        },
+        mouseenter: function(){
+          $(this).css("text-decoration", "underline");
+        },
+        mouseleave: function(){
+          $(this).css("text-decoration", "none");
+        }
+      })
+    })
+  </script>
   </body>
 </html>
