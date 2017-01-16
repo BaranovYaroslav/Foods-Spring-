@@ -2,7 +2,9 @@ package com.springapp.mvc.Utils;
 
 
 import com.springapp.mvc.CafeDto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CoordinatesParser {
 
     private double coordinateX;

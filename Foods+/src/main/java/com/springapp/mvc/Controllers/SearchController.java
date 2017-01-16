@@ -4,6 +4,7 @@ import com.springapp.mvc.CafeDto;
 import com.springapp.mvc.DAO.CafeDao;
 import com.springapp.mvc.Utils.SearchStrategy;
 import com.springapp.mvc.Utils.SimpleSearchStrategy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,9 +16,8 @@ import java.util.List;
 @Controller
 public class SearchController {
 
-    private CafeDao cafeDao = new CafeDao();
-
-    private SearchStrategy searchStrategy = new SimpleSearchStrategy();
+    @Autowired
+    private SearchStrategy searchStrategy;
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
     @ResponseBody

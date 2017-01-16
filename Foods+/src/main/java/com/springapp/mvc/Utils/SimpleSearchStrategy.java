@@ -3,20 +3,26 @@ package com.springapp.mvc.Utils;
 import com.springapp.mvc.Cafe;
 import com.springapp.mvc.CafeDto;
 import com.springapp.mvc.DAO.CafeDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+@Component
 public class SimpleSearchStrategy implements SearchStrategy{
 
-    CafeDao cafeDao = new CafeDao();
+    @Autowired
+    private CafeDao cafeDao;
+
+    @Autowired
+    private CoordinatesParser coordinatesParser;
 
     @Override
     public List<CafeDto> search(int min, int max, String position, boolean meat, boolean vegetarian, boolean cakes) {
 
         List<CafeDto> cafeDtoList = new ArrayList<CafeDto>();
-        CoordinatesParser coordinatesParser = null;
 
         for(Cafe cafe: cafeDao.getALl()){
             if(!meat && !vegetarian && !cakes) {

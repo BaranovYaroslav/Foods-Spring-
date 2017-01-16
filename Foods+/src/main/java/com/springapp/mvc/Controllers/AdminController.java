@@ -3,10 +3,10 @@ package com.springapp.mvc.Controllers;
 import com.springapp.mvc.Cafe;
 import com.springapp.mvc.CafeDto;
 import com.springapp.mvc.DAO.CafeDao;
+import com.springapp.mvc.Utils.LoginUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -35,6 +35,11 @@ public class AdminController {
         return "redirect:/admin";
     }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(){
+        return "login";
+    }
+
     @RequestMapping(value = "/admin/logout", method = RequestMethod.GET)
     private String logout(HttpServletRequest request, HttpServletResponse response){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -44,19 +49,6 @@ public class AdminController {
         return "redirect:/";
     }
 
-    private String getPrincipal(){
-        String userName = null;
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-        if(principal instanceof UserDetails){
-            userName = ((UserDetails) principal).getUsername();
-        } else {
-            userName = principal.toString();
-        }
-
-        return userName;
-    }
-
     @RequestMapping(value = "/redirectToAdmin", method = RequestMethod.GET)
     public String redirectToAdmin(){
         return "redirect:admin";
@@ -64,7 +56,7 @@ public class AdminController {
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String admin(ModelMap model) {
-        model.addAttribute("user", getPrincipal());
+        model.addAttribute("user", LoginUtils.getPrincipal());
         return "admin";
     }
 
@@ -77,17 +69,5 @@ public class AdminController {
     public String newCafe(){
         return "new";
     }
-
-    @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
-    public String accessDeniedPage(ModelMap model) {
-        model.addAttribute("user", getPrincipal());
-        return "403";
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(){
-        return "login";
-    }
-
 
 }
