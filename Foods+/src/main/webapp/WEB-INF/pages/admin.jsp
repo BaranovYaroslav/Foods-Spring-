@@ -16,19 +16,19 @@
 
       <div class="leftBar">
 
-        <div class="leftBarElement">
+        <div id="newCafe" class="leftBarElement">
           <form id="newCafeForm" action="/Foods-1.0-SNAPSHOT/admin/new">
-            <p id="newCafe">New cafe</p>
+            <p>New cafe</p>
           </form>
         </div>
 
-        <div class="leftBarElement">
-            <p id="cafes">See cafes</p>
+        <div id="cafes" class="leftBarElement">
+            <p>See cafes</p>
         </div>
 
-        <div class="leftBarElement">
+        <div id="logout" class="leftBarElement">
           <form id="logoutForm" action="/Foods-1.0-SNAPSHOT/admin/logout">
-            <p id="logout">Logout</p>
+            <p>Logout</p>
           </form>
         </div>
 
@@ -92,16 +92,29 @@
 
         var change = document.createElement("button");
         change.innerHTML = "Change";
+        change.className = "changeButton";
         change.onclick = function(){
           changeCafe(this.parentNode);
         };
         cafe.appendChild(change);
+
+        var remove = document.createElement("button");
+        remove.innerHTML = "Delete";
+        remove.className = "removeButton";
+        remove.onclick = function(){
+          deleteCafe(this.parentNode);
+        };
+        cafe.appendChild(remove);
 
         cafesDiv.appendChild(cafe);
       }
     }
 
     function changeCafe(cafe){
+      console.log(cafe);
+    }
+
+    function deleteCafe(cafe){
       console.log(cafe);
     }
 
