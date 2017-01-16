@@ -28,15 +28,24 @@ public class Cafe {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "x")
+    private double x;
+
+    @Column(name = "y")
+    private double y;
+
     public Cafe(){}
 
-    public Cafe(String name, String description, int middleCost, String address, String contacts, String type) {
+    public Cafe(String name, String description, int middleCost, String address,
+                String contacts, String type, double x, double y) {
         this.name = name;
         this.description = description;
         this.middleCost = middleCost;
         this.address = address;
         this.contacts = contacts;
         this.type = type;
+        this.x = x;
+        this.y = y;
     }
 
     public Cafe(CafeDto cafeDto) {
@@ -46,6 +55,8 @@ public class Cafe {
         this.address = cafeDto.getAddress();
         this.contacts = cafeDto.getContacts();
         this.type = cafeDto.getType();
+        this.x = cafeDto.getX();
+        this.y = cafeDto.getY();
     }
 
     public int getId() {
@@ -102,5 +113,21 @@ public class Cafe {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
     }
 }

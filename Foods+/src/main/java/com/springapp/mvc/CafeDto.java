@@ -15,15 +15,22 @@ public class CafeDto {
 
     private String type;
 
+    private double x;
+
+    private double y;
+
     public CafeDto(){}
 
-    public CafeDto(String name, String description, int middleCost, String address, String contacts, String type) {
+    public CafeDto(String name, String description, int middleCost, String address,
+                   String contacts, String type, double x, double y) {
         this.name = name;
         this.description = description;
         this.middleCost = middleCost;
         this.address = address;
         this.contacts = contacts;
         this.type = type;
+        this.x = x;
+        this.y = y;
     }
 
     public CafeDto(Cafe cafe) {
@@ -32,6 +39,8 @@ public class CafeDto {
         this.middleCost = cafe.getMiddleCost();
         this.address = cafe.getAddress();
         this.contacts = cafe.getContacts();
+        this.x = cafe.getX();
+        this.y = cafe.getY();
     }
 
     public String getName() {
@@ -80,5 +89,21 @@ public class CafeDto {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
     }
 }

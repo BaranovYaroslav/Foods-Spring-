@@ -1,12 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    position: relative;
+}
+
+html{
+    height: 100%;
 }
 
 body{
+    height: 100%;
     background-color: grey;
 }
-
 
 body:hover{
     cursor: default;
@@ -26,7 +31,8 @@ p{
 
 .wrapper{
     width: 1200px;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 184px);
+    max-height: calc(100vh - 184px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -94,7 +100,7 @@ p{
     cursor: pointer;
 }
 
-.leftBar input[type="submit"]{
+.leftBar input[type="button"]{
     width: 100px;
     height: 50px;
     margin-left: 35px;
@@ -107,7 +113,7 @@ p{
     font-size: 16px;
 }
 
-.leftBar input[type="submit"]:hover{
+.leftBar input[type="button"]:hover{
     cursor: pointer;
     background-color: grey;
 }
@@ -116,7 +122,8 @@ p{
     width: 890px;
     margin-left: 260px;
     margin-bottom: 20px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 180px);
+    max-height: calc(100vh - 180px);
     background-color: #ebebeb;
     border-radius: 5px;
     overflow: hidden;

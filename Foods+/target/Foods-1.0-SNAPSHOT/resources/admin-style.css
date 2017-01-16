@@ -52,7 +52,7 @@ p{
 
 .leftBar{
     width: 150px;
-    height: 150px;
+    height: 235px;
     margin-left: 50px;
     margin-top: 0;
     padding: 20px;
@@ -102,6 +102,20 @@ p{
 
 .cafe p{
     margin-bottom: 5px;
+}
+
+.cafe button{
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 110px;
+    height: 40px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.cafe button:hover{
+    cursor: pointer;
+    background-color: #a5a5a5;
 }
 
 .footer{

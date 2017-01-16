@@ -3,6 +3,7 @@ package com.springapp.mvc.Controllers;
 import com.springapp.mvc.Cafe;
 import com.springapp.mvc.CafeDto;
 import com.springapp.mvc.DAO.CafeDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,8 +13,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,9 +20,11 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class AdminController {
 
+    @Autowired
+    private CafeDao cafeDao;
+
     @RequestMapping(value = "/admin/new/save")
     public String saveCafe(@ModelAttribute("cafeDto") CafeDto cafeDto){
-        CafeDao cafeDao = new CafeDao();
         Cafe cafe = new Cafe(cafeDto);
         cafeDao.add(cafe);
         try {

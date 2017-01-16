@@ -1,14 +1,14 @@
 package com.springapp.mvc.DAO;
 
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 public abstract class AbstractDao<T> {
 
-    protected EntityManager entityManager = Persistence.createEntityManagerFactory("punit").createEntityManager();
+    @PersistenceContext(unitName = "punit")
+    protected EntityManager entityManager;
 
     public void add(T t){
         entityManager.getTransaction().begin();
@@ -31,12 +31,12 @@ public abstract class AbstractDao<T> {
     public abstract T getById(int id);
 
     public abstract List<T> getALl();
-
+/*
     public EntityManager getEntityManager() {
         return entityManager;
     }
 
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;
-    }
+    }*/
 }

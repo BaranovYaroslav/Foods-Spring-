@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin-bottom: 5px;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+}
+
+br{
+    margin-bottom: 5px;
+}
+
+.loginForm{
+    width: 300px;
+    height: 210px;
+    margin-top: 200px;
+    margin-left: auto;
+    padding: 10px;
+    margin-right: auto;
+    background-color: #ebebeb;
+    border: 5px solid grey;
+    border-radius: 5px;
+}
+
+.loginForm input{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.loginForm input[type="checkbox"]{
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    margin-top: 3px;
+    float: left;
+}
+
+.rememberMe{
+    width: 300px;
+    height: 17px;
+    margin-bottom: 20px;
+    float: none;
+    vertical-align: middle;
+}
+
+.rememberMe p{
+    margin-bottom: 1px;
+    float: none;
+}
+
+.loginForm input[type="submit"]{
+    width: 80px;
+    height: 40px;
+    margin-left: 110px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    font-family: Consolas, monaco, monospace;
+    font-size: 16px;
+}
+
+.loginForm input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: grey;
+}
