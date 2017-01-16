@@ -31,12 +31,4 @@ public abstract class AbstractDao<T> {
     public abstract T getById(int id);
 
     public abstract List<T> getALl();
-/*
-    public EntityManager getEntityManager() {
-        return entityManager;
-    }
-
-    public void setEntityManager(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }*/
 }
