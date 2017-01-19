@@ -71,7 +71,7 @@
         cafe.className = "cafe";
 
         var id = document.createElement("p");
-        id.innerHTML = currentCafe["name"];
+        id.innerHTML = currentCafe["id"];
         id.style.visibility = "hidden";
         cafe.appendChild(id);
 
@@ -120,13 +120,11 @@
     }
 
     function deleteCafe(cafe){
-      console.log("In delete function");
-      console.log(cafe);
-      var name = cafe.childNodes[0].innerHTML;
-      console.log(name);
+
+      var id = cafe.childNodes[0].innerHTML;
 
       var xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "/Foods-1.0-SNAPSHOT/admin/remove/" + name, true);
+      xhr.open("DELETE", "/Foods-1.0-SNAPSHOT/admin/remove/" + id, true);
       xhr.send();
 
       xhr.onreadystatechange = function(){

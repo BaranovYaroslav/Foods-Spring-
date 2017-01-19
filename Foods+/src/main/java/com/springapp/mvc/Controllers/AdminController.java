@@ -44,18 +44,12 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @RequestMapping(value = "admin/remove/{name}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "admin/remove/{id}", method = RequestMethod.DELETE)
     @ResponseBody
-    public List<CafeDto> deleteCafe(@PathVariable("name") String name){
+    public List<CafeDto> deleteCafe(@PathVariable("id") int id){
 
         List<CafeDto> cafeDTOList = new ArrayList<CafeDto>();
-        Cafe cafeToDelete = null;
-
-        for(Cafe cafe: cafeDao.getALl()){
-            if(cafe.getName().equals(name)){
-                cafeToDelete = cafe;
-            }
-        }
+        Cafe cafeToDelete = cafeDao.getById(id);
 
         cafeDao.delete(cafeToDelete);
 

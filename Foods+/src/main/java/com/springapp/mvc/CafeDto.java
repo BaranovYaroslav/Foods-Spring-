@@ -3,6 +3,8 @@ package com.springapp.mvc;
 
 public class CafeDto {
 
+    private int id;
+
     private String name;
 
     private String description;
@@ -34,6 +36,7 @@ public class CafeDto {
     }
 
     public CafeDto(Cafe cafe) {
+        this.id = cafe.getId();
         this.name = cafe.getName();
         this.description = cafe.getDescription();
         this.middleCost = cafe.getMiddleCost();
@@ -41,6 +44,14 @@ public class CafeDto {
         this.contacts = cafe.getContacts();
         this.x = cafe.getX();
         this.y = cafe.getY();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
