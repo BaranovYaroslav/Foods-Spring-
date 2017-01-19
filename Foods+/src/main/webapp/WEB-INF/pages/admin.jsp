@@ -70,6 +70,11 @@
         var cafe = document.createElement("div");
         cafe.className = "cafe";
 
+        var id = document.createElement("p");
+        id.innerHTML = currentCafe["name"];
+        id.style.visibility = "hidden";
+        cafe.appendChild(id);
+
         var name = document.createElement("p");
         name.innerHTML += "Name: " + currentCafe["name"];
         cafe.appendChild(name);
@@ -111,11 +116,24 @@
     }
 
     function changeCafe(cafe){
-      console.log(cafe);
+
     }
 
     function deleteCafe(cafe){
+      console.log("In delete function");
       console.log(cafe);
+      var name = cafe.childNodes[0].innerHTML;
+      console.log(name);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("DELETE", "/Foods-1.0-SNAPSHOT/admin/remove/" + name, true);
+      xhr.send();
+
+      xhr.onreadystatechange = function(){
+        if(xhr.status == 200 && xhr.readyState == 4){
+          loadCafes(JSON.parse(xhr.responseText.toString()));
+        }
+      }
     }
 
     $(document).ready(function(){

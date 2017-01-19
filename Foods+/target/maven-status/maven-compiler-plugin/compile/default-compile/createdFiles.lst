@@ -1,4 +1,5 @@
 com\springapp\mvc\CafeDto.class
+com\springapp\mvc\Controllers\AdminController$1.class
 com\springapp\mvc\DAO\AbstractDao.class
 com\springapp\mvc\Controllers\AdminController.class
 com\springapp\mvc\Utils\SimpleSearchStrategy.class

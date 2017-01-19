@@ -2,10 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:jee="http://www.springframework.org/schema/jee"
+
         xsi:schemaLocation="http://www.springframework.org/schema/beans
                             http://www.springframework.org/schema/beans/spring-beans.xsd
                             http://www.springframework.org/schema/context
-                            http://www.springframework.org/schema/context/spring-context.xsd">
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/jee
+                            http://www.springframework.org/schema/jee/spring-jee.xsd">
 
         <context:annotation-config/>
 
@@ -20,6 +24,23 @@
             <property name="url" value="jdbc:mysql://localhost:3306/foods"/>
             <property name="username" value="root"/>
             <property name="password" value="root"/>
+        </bean>
+
+        <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+            <property name="entityManagerFactory" ref="emf"/>
+        </bean>
+
+        <jee:jndi-lookup id="connectionFactory" jndi-name="java:jboss/exported/jms/RemoteConnectionFactory"/>
+
+        <bean id="cf" class="org.springframework.jms.connection.UserCredentialsConnectionFactoryAdapter">
+            <property name="targetConnectionFactory" ref="connectionFactory"/>
+            <property name="username" value="user"/>
+            <property name="password" value="pass"/>
+        </bean>
+
+        <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+            <property name="connectionFactory" ref="cf"/>
+            <property name="defaultDestinationName" value="TestQ"/>
         </bean>
     
 </beans>

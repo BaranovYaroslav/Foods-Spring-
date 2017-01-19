@@ -26,7 +26,8 @@ p{
 
 .wrapper{
     width: 1200px;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 184px);
+    max-height: calc(100vh - 184px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -84,7 +85,8 @@ p{
     width: 890px;
     margin-left: 260px;
     margin-bottom: 20px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 180px);
+    max-height: calc(100vh - 180px);
     background-color: #ebebeb;
     border-radius: 5px;
 }
@@ -106,7 +108,6 @@ p{
 
 .cafe button{
     margin-top: 20px;
-    margin-left: 150px;
     width: 110px;
     height: 40px;
     border: 2px solid grey;
@@ -115,7 +116,26 @@ p{
 
 .cafe button:hover{
     cursor: pointer;
+}
+
+.changeButton{
+    margin-left: 75px;
+    float: left;
+    background-color: #d9d9d9;
+}
+
+.changeButton:hover{
     background-color: #a5a5a5;
+}
+
+.removeButton{
+    margin-left: 40px;
+    float: left;
+    background-color: #c67269;
+}
+
+.removeButton:hover{
+    background-color: #b74d44;
 }
 
 .footer{
