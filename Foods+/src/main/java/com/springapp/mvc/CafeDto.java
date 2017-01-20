@@ -44,6 +44,7 @@ public class CafeDto {
         this.contacts = cafe.getContacts();
         this.x = cafe.getX();
         this.y = cafe.getY();
+        this.type = cafe.getType();
     }
 
     public int getId() {

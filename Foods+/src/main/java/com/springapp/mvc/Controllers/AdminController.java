@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.jms.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,14 +38,14 @@ public class AdminController {
 
     private static Logger logger = LogManager.getLogger(AdminController.class);
 
-    @RequestMapping(value = "/admin/new/save")
+    @RequestMapping(value = "/admin/new/save", method = RequestMethod.POST)
     public String saveCafe(@ModelAttribute("cafeDto") CafeDto cafeDto){
         Cafe cafe = new Cafe(cafeDto);
         cafeDao.add(cafe);
         return "redirect:/admin";
     }
 
-    @RequestMapping(value = "admin/remove/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/admin/remove/{id}", method = RequestMethod.DELETE)
     @ResponseBody
     public List<CafeDto> deleteCafe(@PathVariable("id") int id){
 
@@ -58,6 +59,25 @@ public class AdminController {
         }
 
         return cafeDTOList;
+    }
+
+    @RequestMapping(value = "/admin/change/{id}", method = RequestMethod.GET)
+    public String changeView(@PathVariable("id") int id){
+        return "change";
+    }
+
+    @RequestMapping(value = "/admin/change/{id}/getCafe", method = RequestMethod.GET)
+    @ResponseBody
+    public CafeDto change(@PathVariable("id") int id){
+        return new CafeDto(cafeDao.getById(id));
+    }
+
+    @RequestMapping(value = "/admin/change/save", method = RequestMethod.POST)
+    public String saveChanges(@ModelAttribute("cafeDto") CafeDto cafeDto){
+        Cafe cafe = new Cafe(cafeDto);
+        cafe.setId(cafeDto.getId());
+        cafeDao.update(cafe);
+        return "redirect:/admin";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

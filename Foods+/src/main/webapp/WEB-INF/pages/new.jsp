@@ -12,7 +12,7 @@
     </div>
 
     <div class="wrapper">
-      <form class="newCafeForm" name="userDto" action="/Foods-1.0-SNAPSHOT/admin/new/save">
+      <form class="newCafeForm" name="userDto" action="/Foods-1.0-SNAPSHOT/admin/new/save" method="post">
         <p>New cafe</p>
 
         <p>Enter name:</p>

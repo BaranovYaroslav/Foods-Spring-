@@ -72,7 +72,7 @@
 
         var id = document.createElement("p");
         id.innerHTML = currentCafe["id"];
-        id.style.visibility = "hidden";
+        id.style.display = "none";
         cafe.appendChild(id);
 
         var name = document.createElement("p");
@@ -95,13 +95,13 @@
         contacts.innerHTML += "Contacts: " + currentCafe["contacts"];
         cafe.appendChild(contacts);
 
-        var change = document.createElement("button");
-        change.innerHTML = "Change";
-        change.className = "changeButton";
-        change.onclick = function(){
+        var edit = document.createElement("button");
+        edit.innerHTML = "Edit";
+        edit.className = "editButton";
+        edit.onclick = function(){
           changeCafe(this.parentNode);
         };
-        cafe.appendChild(change);
+        cafe.appendChild(edit);
 
         var remove = document.createElement("button");
         remove.innerHTML = "Delete";
@@ -116,7 +116,12 @@
     }
 
     function changeCafe(cafe){
+      var id = cafe.childNodes[0].innerHTML;
 
+      var form = document.createElement("form");
+      form.action = "/Foods-1.0-SNAPSHOT/admin/change/" + id;
+      form.method = "GET";
+      form.submit();
     }
 
     function deleteCafe(cafe){
